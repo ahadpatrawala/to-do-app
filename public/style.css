@@ -1,11 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: whitesmoke;
-    font-family:'Roboto',sans-serif;
+    background-image: linear-gradient(120deg, #f6d365, #d88771);
+    color:white;
+    font-family: "Poopins",sans-serif;
+    min-height: 100vh;
+}
+
+form{
+    min-height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+form input, 
+form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+    font-family: "Poopins",sans-serif;
+}
+
+form button{
+ color: #d88771;
+ background: white;
+ cursor: pointer;
+ transition: all 0.3s ease;   
+}
+
+form button:hover{
+    background: #d88771;
+    color: white;
+}
+
+.trash-btn{
+    background: #ff6f47;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.todo-item{
+    padding:0rem 0.5rem;
 }
 
 .todo-list {
+    font-family: "Poopins",sans-serif;
     background-color: white;
-    font-family:'Roboto',sans-serif;
     margin: auto;
     width: 50%;
     display: flex;
@@ -24,60 +73,34 @@ body {
             /* The third layer shadow */
         0 20px 1px -9px rgba(0,0,0,0.15);
     padding: 30px;
+    justify-content: center;
 }
 
 .todo-item {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 30px 20px 0;
     width: 70%;
     border-bottom: 1px solid #cecece;
-    font-family:'Roboto',sans-serif;
+    font-family: "Poopins",sans-serif;
     font-weight: 100;
     font-size: 15px;
-    color: #333333;
+    color: red;
 }
 
-.b2{
-    display: inline-block;
-    padding:0.5em 3em;
-    border:0.16em solid #000000;
-    margin:0 0.3em 0.3em 0;
-    box-sizing: border-box;
-    text-decoration:none;
-    text-transform:uppercase;
-    font-family:Roboto,sans-serif;
-    font-weight:400;
-    color:#000000;
-    text-align:center;
-    transition: all 0.15s;
+button{
+    font-family: "Poopins",sans-serif;
+    color:#ff6f47;
+    cursor: pointer;
+    padding: 1rem;
 }
 
-.b2:hover{
-    color:#efefef;
-    background-color: #333333;
+button:after{
+    position: absolute;
+    background: #ff6f47;
+    padding: 1rem;
 }
-
-.b2:active{
-    color:#efefef;
-    background-color: #555555;
-}
-
-.toggle{
-    display: block;
-    width: 100%; 
-    text-align: center;
-}
-
-.b1{
-    width: 100%;
-}
-
-.b3{
-    position: absolute; 
-    right: 300px;
-} 
 
 input[type=checkbox] {
     margin-right: 10px;
@@ -86,13 +109,4 @@ input[type=checkbox] {
 
 input[type=checkbox]:focus {
     outline: 0;
-}
-
-input[type=text]{
-    flex-grow: 1;
-    border:0.16em solid #000000;
-    color: #333333;
-    font-size: 0.85em;
-    font-family:'Roboto',sans-serif;
-    line-height: 2em;
 }

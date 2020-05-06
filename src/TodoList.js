@@ -36,7 +36,6 @@ updateTodoToShow = (s) => {
     this.setState ({
         todoToShow: s
     })
-    console.log("fun")
 }
 
 handleDeleteTodo = (id) =>{
@@ -107,18 +106,18 @@ render(){
                 Todo completed: {this.state.todos.filter(todo =>todo.completed).length}
             </div>
             <div> 
-                <button className="b2" onClick={()=>this.updateTodoToShow("all")}>All</button>
-                <button  className="b2"onClick={()=>this.updateTodoToShow("active")}>Active</button>
-                <button className="b2" onClick={()=>this.updateTodoToShow("complete")}>Complete</button>
+                <button  onClick={()=>this.updateTodoToShow("all")}>All</button>
+                <button  onClick={()=>this.updateTodoToShow("active")}>Active</button>
+                <button onClick={()=>this.updateTodoToShow("complete")}>Complete</button>
             </div>
           {this.state.todos.some(todo => todo.completed)? ( 
           <div className="toggle">
-                <button className="b1 b2" onClick={this.removeAllTodosThatAreComplete}>
+                <button onClick={this.removeAllTodosThatAreComplete}>
                     Remove All Complete Todos
                 </button>
             </div>) : null}
             <div className="toggle"> 
-                <button className="b1 b2" onClick={this.handleAllComplete}>
+                <button  onClick={this.handleAllComplete}>
                     Toggle All Complete: {`${this.state.toggleAllComplete}`}
                 </button>
             </div>

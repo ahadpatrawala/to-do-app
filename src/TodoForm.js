@@ -33,12 +33,15 @@ import shortid from 'shortid'
       <div>
         <form onSubmit={this.handleSubmit}>
           <input
+            className = 'todo-input'
             type="text"
             name="text" 
             value={this.state.text} 
             onChange={this.handleChange} 
             placeholder="Enter to-do items here"/>
-          <button className="form-todo b2" onClick={this.handleSubmit}>Add to List</button>
+          <button className="todo-button" type="submit" onClick={this.handleSubmit}>
+            <i className="fas fa-plus-square"></i>
+          </button>
         </form>
         <h1 style={{textAlign:"center"}}>My To Do List:</h1>
       </div>
